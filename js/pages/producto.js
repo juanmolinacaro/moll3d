@@ -22,7 +22,7 @@
           ${utils.fotoHTML(p, { lazy: false })}
           <div class="ficha__info">
             <h1>${esc(p.planta)}</h1>
-            <p class="suave">Maceta ${esc(p.maceta)} ${esc(p.color.toLowerCase())}, impresa en 3D por Moll3D, con planta de ${esc(App.config.vivero)}. Es una pieza única: recibes exactamente la de la foto.</p>
+            <p class="suave">Esta maceta ${esc(p.maceta)} ${esc(p.color.toLowerCase())} salió de nuestra impresora 3D capa por capa y lleva esta planta de ${esc(App.config.vivero)} ya sembrada. Es la única así: recibes exactamente la de la foto.</p>
             <p class="ficha__precio">${utils.dinero(p.precio)}</p>
             <dl class="ficha__cuidados">
               <dt>Luz</dt><dd>${esc(p.luz)}</dd>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="ficha__otras">
-          <h2>Otras piezas</h2>
+          <h2>También te pueden enamorar</h2>
           <div class="rejilla">${otras.map(ui.tarjeta).join("")}</div>
         </div>
       </div>`;

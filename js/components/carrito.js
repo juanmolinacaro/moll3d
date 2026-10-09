@@ -17,7 +17,7 @@
   function pintar() {
     contador.textContent = store.cantidad();
     if (!store.cantidad()) {
-      items.innerHTML = `<div class="carrito__vacio"><p>Tu carrito está vacío. Elige una pieza en la tienda y aparecerá aquí.</p>
+      items.innerHTML = `<div class="carrito__vacio"><p>Tu carrito está esperando su primera planta. Elige una pieza en la tienda y aparecerá aquí.</p>
         <a class="btn btn--chico" href="#/tienda" data-cerrar-carrito>Ir a la tienda</a></div>`;
       pie.innerHTML = "";
       return;
