@@ -1,10 +1,9 @@
-// Vista de inicio: etiqueta del héroe y tienda con filtros. Las secciones fijas están en index.html.
+// Vista de inicio: tienda con filtros. Las secciones fijas están en index.html.
 (() => {
   const { data, ui, store } = App;
   const rejilla = document.getElementById("rejilla");
   const cuenta = document.getElementById("tienda-cuenta");
   const filtros = document.getElementById("filtros");
-  const DESTACADO = "hahnii-dorada-huellitas-negra";
   let filtro = "todas";
 
   function pintarTienda() {
@@ -21,11 +20,7 @@
     pintarTienda();
   });
 
-  function montar() {
-    const destacado = data.porId(DESTACADO) || data.productos[0];
-    document.getElementById("heroe-etiqueta").innerHTML = destacado ? ui.etiqueta(destacado, { comoEnlace: true }) : "";
-    pintarTienda();
-  }
+  const montar = pintarTienda;
 
   store.suscribir(pintarTienda);
   App.pages.inicio = { montar };

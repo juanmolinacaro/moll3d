@@ -1,37 +1,42 @@
 /*
-  Moll3D: plan de diseño
-  - Tema: vivero que vende piezas únicas. El elemento memorable es la etiqueta de vivero
-    (la estaca blanca con el nombre de la planta), usada solo en el héroe y en la ficha de producto.
-  - Color: fondo verde musgo; acento amarillo tomado del borde de la Sansevieria Hahnii dorada.
-    Las fotos (pared cálida y mesa de madera) se ven como ventanas encendidas sobre el verde.
-  - Tipos: Unbounded (redonda y ancha, como una pieza impresa) para títulos; Figtree para el texto.
-  - Layout: alineado a la izquierda; héroe en dos columnas; tienda en rejilla de fotos sin cajas.
-  - Un solo look deliberado (oscuro). No hay variante clara.
+  Moll3D: diseño claro (elegido por el usuario por encima del rediseño verde musgo del 2026-10-08).
+  - Fondo crema, verde bosque como color de marca, modo oscuro automático.
+  - Tipos: Bricolage Grotesque para títulos; Figtree para el texto.
+  - Fotos contenidas: tarjetas cuadradas (4 por fila en escritorio) y collage de 3 fotos en el héroe.
 */
 :root {
-  --musgo: #15261C;       /* fondo */
-  --hoja: #1C3125;        /* superficies: carrito, ficha, campos */
-  --linea: #2E4837;       /* bordes y divisores */
-  --papel: #F1EFE5;       /* texto principal y etiqueta de vivero */
-  --salvia: #A7BBA8;      /* texto secundario */
-  --hahnii: #E5D27B;      /* acento: botones principales, foco */
-  --tinta: #15261C;       /* texto sobre acento y sobre etiqueta */
+  --fondo: #F7F3EA;
+  --superficie: #FFFDF8;
+  --figura: #EEE7D8;
+  --tinta: #1D2A21;
+  --suave: #5E695F;
+  --linea: #E0D8C6;
+  --marca: #1F3D2B;
+  --marca-texto: #F7F3EA;
+  --boton: #1F3D2B;
+  --boton-texto: #F7F3EA;
 
-  --display: "Unbounded", "Arial Rounded MT Bold", "Segoe UI", system-ui, sans-serif;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
   --texto: "Figtree", "Segoe UI", system-ui, sans-serif;
-
-  /* Escala tipográfica (razón ≈1.25) */
-  --t-sm: 0.875rem;
-  --t-base: 1rem;
-  --t-md: 1.125rem;
-  --t-lg: 1.375rem;
-  --t-xl: clamp(1.75rem, 3.2vw, 2.5rem);
-  --t-2xl: clamp(1.875rem, 3.9vw, 3.375rem);
 
   --gutter: clamp(16px, 4vw, 40px);
   --ancho: 1200px;
-  --radio-foto: 20px;
-  --radio-control: 999px;
+  --radio: 16px;
+  color-scheme: light;
+}
 
-  color-scheme: dark;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #111914;
+    --superficie: #18221B;
+    --figura: #1F2B23;
+    --tinta: #ECE7DA;
+    --suave: #A2AC9F;
+    --linea: #2D3A31;
+    --marca: #213F2D;
+    --marca-texto: #F2EDE1;
+    --boton: #D9E8CF;
+    --boton-texto: #13201A;
+    color-scheme: dark;
+  }
 }

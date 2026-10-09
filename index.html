@@ -8,20 +8,28 @@
   <meta property="og:title" content="Moll3D, macetas impresas en 3D con plantas de Valles vivero">
   <meta property="og:description" content="Cada pieza es única: recibes la de la foto. Pide por WhatsApp.">
   <meta property="og:image" content="img/foto-07.jpg">
-  <meta name="theme-color" content="#15261C">
+  <meta name="theme-color" content="#1F3D2B">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <p class="aviso">Envíos a toda Colombia. Cada pieza es única: recibes la de la foto.</p>
+  <p class="aviso">Envíos a toda Colombia · Cada pieza es única: te llega la de la foto</p>
 
   <header class="cabecera">
     <div class="wrap">
-      <a class="marca" href="#/"><b>Moll3D</b><small>con Valles vivero</small></a>
+      <a class="marca" href="#/" aria-label="Moll3D, inicio">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs><path id="sello" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs>
+          <circle cx="50" cy="50" r="48" fill="var(--marca)"/>
+          <text fill="var(--marca-texto)" font-family="Figtree, sans-serif" font-size="11.5" font-weight="700" letter-spacing="3.2"><textPath href="#sello">MOLL3D · VALLES VIVERO ·</textPath></text>
+          <path d="M50 66 C50 56 50 50 50 44 M50 52 C44 50 40 45 40 39 C46 39 50 43 50 50 M50 48 C56 46 60 41 60 35 C54 35 50 40 50 47" stroke="var(--marca-texto)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="marca__nombre"><b>Moll3D</b><small>con Valles vivero</small></span>
+      </a>
       <nav class="menu" aria-label="Secciones">
         <a href="#/tienda">Tienda</a>
         <a href="#/como-pedir">Cómo pedir</a>
@@ -37,22 +45,41 @@
       <section class="heroe">
         <div class="wrap">
           <div class="heroe__texto">
-            <h1>Plantas listas para tu casa, en macetas que imprimimos capa por capa.</h1>
-            <h2 class="heroe__sub">Con plantas de Valles vivero</h2>
-            <p>Cada maceta sale de nuestra impresora 3D y lleva una planta de Valles ya trasplantada. Hay una sola de cada una: la de la foto es la que te llega.</p>
+            <p class="etiqueta-chica">Macetas impresas en 3D · Hecho en Colombia</p>
+            <h1>Objetos con diseño para tus plantas.</h1>
+            <h2 class="heroe__sub">Plantas de Valles vivero</h2>
+            <p>Macetas impresas en 3D en nuestro taller, con una planta de Valles ya trasplantada. Cada pieza es única: lo que ves en la foto es lo que te llega.</p>
             <div class="heroe__acciones">
-              <a class="btn" href="#/tienda">Ver las piezas</a>
-              <a class="btn btn--borde" href="#/como-pedir">Cómo pedir</a>
+              <a class="btn" href="#/tienda">Ver la tienda</a>
+              <a class="btn btn--borde" href="#/valles">Conoce Valles</a>
             </div>
           </div>
-          <div class="heroe__foto">
+          <div class="collage">
             <img src="img/foto-07.jpg" alt="Sansevieria Hahnii dorada en maceta Huellitas negra" width="960" height="1200">
-            <div id="heroe-etiqueta"></div>
+            <img src="img/foto-19.jpg" alt="Sansevieria Hahnii verde en maceta Panal blanca" width="960" height="1200">
+            <img src="img/foto-20.jpg" alt="Pothos en maceta Panal negra" width="960" height="1200">
           </div>
         </div>
       </section>
 
-      <section class="seccion" id="como-pedir" style="padding-top:0">
+      <div class="wrap">
+        <div class="accesos">
+          <div class="acceso">
+            <p class="etiqueta-chica">Moll3D</p>
+            <h3>Piezas únicas</h3>
+            <p>Macetas Panal, Puntos, Huellitas y Escamas impresas en 3D. Cada una sale una sola vez.</p>
+            <a class="btn btn--chico" href="#/tienda">Ver la tienda</a>
+          </div>
+          <div class="acceso acceso--marca">
+            <p class="etiqueta-chica">Valles vivero</p>
+            <h3>Maceta + planta</h3>
+            <p>Todas llegan con su planta de Valles ya trasplantada, con sus cuidados.</p>
+            <a class="btn btn--chico btn--claro" href="#/valles">Conoce Valles</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="seccion" id="como-pedir">
         <div class="wrap">
           <h2>Cómo pedir</h2>
           <ol class="pasos">
@@ -66,8 +93,9 @@
       <section class="seccion" id="tienda" style="padding-top:0">
         <div class="wrap">
           <div class="intro">
-            <h2>Piezas disponibles</h2>
-            <p>Sansevierias, haworthias y pothos en macetas Panal, Puntos, Huellitas y Escamas. Toca una foto para ver sus cuidados.</p>
+            <p class="etiqueta-chica">Tienda Moll3D</p>
+            <h2>Una planta para cada rincón de tu casa</h2>
+            <p>Cada maceta se imprime en nuestro taller y lleva una planta de Valles. Toca una foto para ver sus cuidados.</p>
           </div>
           <div class="tienda__barra">
             <div class="filtros" id="filtros" role="group" aria-label="Filtrar por planta">
@@ -85,21 +113,23 @@
       <section class="seccion valles" id="valles">
         <div class="wrap">
           <div class="intro">
+            <p class="etiqueta-chica">Nuestro vivero</p>
             <h2>Valles vivero</h2>
             <p>Las plantas vienen de Valles, nuestro vivero. Moll3D diseña e imprime las macetas, Valles pone las plantas, y juntos te las entregamos listas para tu casa, tu oficina o para regalar.</p>
           </div>
           <ul class="valles__lista">
-            <li><strong>Aclimatadas a interior</strong><span>Salen del vivero acostumbradas a la luz de una casa.</span></li>
-            <li><strong>Ya trasplantadas</strong><span>Con el sustrato adecuado para cada especie.</span></li>
-            <li><strong>Con sus cuidados</strong><span>Luz, riego y cuándo cambiarla de maceta.</span></li>
-            <li><strong>Bien embaladas</strong><span>El sustrato va sujeto para que viajen sin moverse.</span></li>
+            <li><strong>Aclimatadas</strong><span>Listas para luz de interior desde el primer día</span></li>
+            <li><strong>Trasplantadas</strong><span>La planta llega ya en su maceta</span></li>
+            <li><strong>Con cuidados</strong><span>Luz, riego y cuándo cambiarla de maceta</span></li>
+            <li><strong>Bien embaladas</strong><span>Sustrato sujeto para que viajen sin moverse</span></li>
           </ul>
         </div>
       </section>
 
       <section class="seccion" id="preguntas">
         <div class="wrap">
-          <h2>Preguntas frecuentes</h2>
+          <p class="etiqueta-chica">Preguntas frecuentes</p>
+          <h2>Antes de comprar</h2>
           <div class="preguntas">
             <details><summary>¿De qué material son las macetas?</summary><p>De PLA, un plástico hecho a partir de almidón de maíz. Es resistente para interior y para exteriores cubiertos. Evita dejarlas todo el día al sol directo, porque el calor fuerte puede deformarlas.</p></details>
             <details><summary>¿Tienen drenaje?</summary><p>Sí. Todas tienen agujero de drenaje y plato a juego para que el agua no manche tus muebles.</p></details>
@@ -117,8 +147,8 @@
 
   <footer class="pie">
     <div class="wrap">
-      <span><strong>Moll3D</strong>, macetas impresas en 3D con plantas de Valles vivero.</span>
-      <span>Envíos a toda Colombia</span>
+      <span class="marca__nombre"><b>Moll3D</b><small>Macetas impresas en 3D · Plantas de Valles vivero</small></span>
+      <span>Colombia</span>
     </div>
   </footer>
 
